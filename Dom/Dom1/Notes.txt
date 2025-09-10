@@ -1,0 +1,9 @@
+Insert METHODS
+
+node.append(el)
+node.prepend(el)
+node.before(el)
+node.after(el)
+
+Delete Elements
+node.remove(el)
