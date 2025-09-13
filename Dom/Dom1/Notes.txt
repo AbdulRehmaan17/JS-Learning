@@ -7,3 +7,55 @@ node.after(el)
 
 Delete Elements
 node.remove(el)
+
+Selecting Elements
+document.getElementById("idName");       // Select by id
+document.getElementsByClassName("cls"); // Select by class (HTMLCollection)
+document.getElementsByTagName("div");   // Select by tag
+document.querySelector(".cls");         // First match (CSS selector)
+document.querySelectorAll("p");         // All matches (NodeList)
+
+👉 Changing Content
+element.innerHTML = "New <b>Content</b>";
+element.textContent = "Plain Text"; 
+element.value = "New input value";  // For input fields
+
+👉 Changing Styles
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+
+👉 Attributes
+element.setAttribute("src", "image.jpg");
+let value = element.getAttribute("href");
+element.removeAttribute("disabled");
+
+👉 Creating & Removing
+let newDiv = document.createElement("div");
+newDiv.textContent = "Hello!";
+document.body.appendChild(newDiv);
+
+element.remove(); // Removes an element
+
+👉 Events
+element.addEventListener("click", function() {
+    alert("Button Clicked!");
+});
+
+📝 Example
+
+Suppose you have this HTML:
+
+<h1 id="title">Hello World</h1>
+<button id="btn">Click Me</button>
+
+
+And JS:
+
+let title = document.getElementById("title");
+let btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {
+    title.textContent = "You clicked the button!";
+    title.style.color = "blue";
+});
+
