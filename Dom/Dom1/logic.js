@@ -1,2 +1,4 @@
-let div1 = document.querySelectorAll('div');
-console.log(div1);
+let heading = document.querySelector('h1');
+heading.innerText = "Hello I lOve Shumyla Altaf";
+heading.style.color = "red";
+console.log(heading.innerText);
